@@ -1,12 +1,12 @@
 // variabile container principale
-let contPrincipale = document.querySelector('.contLista')
-// variabili dei nodi contenitori
-let contLista = document.querySelector('.containerElement')
-let contIcon = document.querySelector('.containerClose')
+let contPrincipale = document.querySelector('.contLista');
+// variabili dei nodi contenitori 
+let contLista = document.querySelector('.containerElement');
+let contIcon = document.querySelector('.containerClose');
 
 // chiedo all'utente la lista della spesa
 let i = 0;
-let arrSpesaInput = []
+let arrSpesaInput = [];
 let spesaDefault = [   
     'carciofi',
     'altri carciofi',
@@ -14,7 +14,7 @@ let spesaDefault = [
     'pane',
     'uova',
     'acqua'
-]
+];
 
 // ciclo per chiedere all' utente di inserire la spesa o spesa default
 let inputUtente;
@@ -85,13 +85,13 @@ if(inputUtente === 'spesa default'){
 }
 
 // creo frase per far capire la funzionalità
-let frase = document.createElement('h2')
-frase.append('PROVA A CLICCARE SULLA X DI QUALCHE ELEMENTO')
-contPrincipale.append(frase)
+let frase = document.createElement('h2');
+frase.append('PROVA A CLICCARE SULLA X DI QUALCHE ELEMENTO');
+contPrincipale.append(frase);
 
 // creo delle variabili con la lista degli elementi da eliminare
-let eliminate = document.getElementsByClassName('fa-x')
-let lista = document.getElementsByClassName('listaSpesa')
+let eliminate = document.getElementsByClassName('fa-x');
+let lista = document.getElementsByClassName('listaSpesa');
 
 // creo un evento per eliminare con il click gli elementi in lista
 contIcon.addEventListener('click', (event) =>{
@@ -101,5 +101,5 @@ contIcon.addEventListener('click', (event) =>{
     // gli aggiungo la classe elimina
     eliminate[posizione].classList.add('close')
     lista[posizione].classList.add('close')
-})
+});
 
