@@ -14,7 +14,7 @@ let spesaDefault = [
     'acqua'
 ]
 let inputUtente;
-while(i < 2 ){
+while(i < 2){
     let input = prompt("scrivi la spesa o scrivi 'spesa default'")
     if(input !== 'spesa default'){
         arrSpesaInput.push(input)
@@ -31,6 +31,7 @@ console.log(inputUtente)
 i = 0;
 if(inputUtente === 'spesa default'){
 
+    // se seleziono la spesa defult
     while(i < spesaDefault.length -1){
         // creo elementi
         let elementSpesa = document.createElement('li')
@@ -50,5 +51,29 @@ if(inputUtente === 'spesa default'){
         // appendo li con la x al contenitore
         contIcon.append(li_contIcon)
         i++
+    }
+
+}else{
+    // se invece scrivo personalmente la spesa
+    while(i < arrSpesaInput.length){
+        // creo elementi
+        let elementSpesa = document.createElement('li')
+        let li_contIcon = document.createElement('li')
+        let icon = document.createElement('i')
+
+        // appendo testo a element spesa
+        elementSpesa.append(arrSpesaInput[i])
+
+        // aggiungo classe a elemento i
+        icon.classList.add('fa-solid')
+        icon.classList.add('fa-x')
+        // appendo i a li
+        li_contIcon.append(icon)
+        // appenso elemento lista a ul
+        contLista.append(elementSpesa)
+        // appendo li con la x al contenitore
+        contIcon.append(li_contIcon)
+        i++
+        console.log(elementSpesa)
     }
 }
