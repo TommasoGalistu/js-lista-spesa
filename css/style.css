@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contLista{
+    display: flex;
+}
+li{
+    
+    margin: 2rem;
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+.fa-x{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.fa-x:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
