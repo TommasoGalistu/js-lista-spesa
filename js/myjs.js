@@ -97,7 +97,7 @@ let lista = document.getElementsByClassName('listaSpesa');
 contIcon.addEventListener('click', (event) =>{
     // trovo la posizione dell'elemento cliccato
     let posizione = Array.from(eliminate).indexOf(event.target)
-
+    
     // gli aggiungo la classe elimina
     eliminate[posizione].classList.add('close')
     lista[posizione].classList.add('close')
